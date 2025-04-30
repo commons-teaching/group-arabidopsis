@@ -1,20 +1,20 @@
-filename,sample_id,id,comment_eco,condition
-20250402_PMA_tp24_000036_01_01.mzML,tp24_000036,70134,Control + CO,control_positive
-20250402_PMA_tp24_000037_01_01.mzML,tp24_000037,70137,P2 - B,P2_negative
-20250402_PMA_tp24_000038_01_02.mzML,tp24_000038,70138,P2 - C,P2_negative
-20250402_PMA_tp24_000039_01_01.mzML,tp24_000039,70139,P2- D,P2_negative
-20250402_PMA_tp24_000040_01_01.mzML,tp24_000040,70140,P2+ A,P2_positive
-20250402_PMA_tp24_000041_01_01.mzML,tp24_000041,70135,Control -,control_negative
-20250402_PMA_tp24_000042_01_01.mzML,tp24_000042,70141,P2 + B,P2_positive
-20250402_PMA_tp24_000043_01_01.mzML,tp24_000043,70142,P2 + C,P2_positive
-20250402_PMA_tp24_000044_01_01.mzML,tp24_000044,70143,P2+ D,P2_positive
-20250402_PMA_tp24_000046_01_01.mzML,tp24_000046,70136,P2 - A,P2_negative
-20250402_PMA_tp24_arabido_mapp_bk_post_00.mzML,mapp_bk_post_00,NA,NA,NA
-20250402_PMA_tp24_arabido_mapp_bk_post_01.mzML,mapp_bk_post_01,NA,NA,NA
-20250402_PMA_tp24_arabido_mapp_bk_pre_00.mzML,mapp_bk_pre_00,NA,NA,NA
-20250402_PMA_tp24_arabido_mapp_bk_pre_01.mzML,mapp_bk_pre_01,NA,NA,NA
-20250402_PMA_tp24_qc_arabidopsis_00.mzML,qc_arabidopsis_00,NA,NA,NA
-20250402_PMA_tp24_qc_arabidopsis_01.mzML,qc_arabidopsis_01,NA,NA,NA
-20250402_PMA_tp24_qc_arabidopsis_02.mzML,qc_arabidopsis_02,NA,NA,NA
-20250402_PMA_tp24_qc_arabidopsis_03.mzML,qc_arabidopsis_03,NA,NA,NA
-20250402_PMA_tp24_qc_arabidopsis_04.mzML,qc_arabidopsis_04,NA,NA,NA
+filename,sample_id,id,comment_eco,ATTRIBUTE_condition,source_taxon
+20250402_PMA_tp24_000036_01_01.mzML,tp24_000036,70134,Control + CO,control_positive,NA
+20250402_PMA_tp24_000037_01_01.mzML,tp24_000037,70137,P2 - B,P2_negative,Arabidopsis thaliana
+20250402_PMA_tp24_000038_01_02.mzML,tp24_000038,70138,P2 - C,P2_negative,Arabidopsis thaliana
+20250402_PMA_tp24_000039_01_01.mzML,tp24_000039,70139,P2- D,P2_negative,Arabidopsis thaliana
+20250402_PMA_tp24_000040_01_01.mzML,tp24_000040,70140,P2+ A,P2_positive,Arabidopsis thaliana
+20250402_PMA_tp24_000041_01_01.mzML,tp24_000041,70135,Control -,control_negative,NA
+20250402_PMA_tp24_000042_01_01.mzML,tp24_000042,70141,P2 + B,P2_positive,Arabidopsis thaliana
+20250402_PMA_tp24_000043_01_01.mzML,tp24_000043,70142,P2 + C,P2_positive,Arabidopsis thaliana
+20250402_PMA_tp24_000044_01_01.mzML,tp24_000044,70143,P2+ D,P2_positive,Arabidopsis thaliana
+20250402_PMA_tp24_000046_01_01.mzML,tp24_000046,70136,P2 - A,P2_negative,Arabidopsis thaliana
+20250402_PMA_tp24_arabido_mapp_bk_post_00.mzML,mapp_bk_post_00,NA,NA,NA,NA
+20250402_PMA_tp24_arabido_mapp_bk_post_01.mzML,mapp_bk_post_01,NA,NA,NA,NA
+20250402_PMA_tp24_arabido_mapp_bk_pre_00.mzML,mapp_bk_pre_00,NA,NA,NA,NA
+20250402_PMA_tp24_arabido_mapp_bk_pre_01.mzML,mapp_bk_pre_01,NA,NA,NA,NA
+20250402_PMA_tp24_qc_arabidopsis_00.mzML,qc_arabidopsis_00,NA,NA,NA,NA
+20250402_PMA_tp24_qc_arabidopsis_01.mzML,qc_arabidopsis_01,NA,NA,NA,NA
+20250402_PMA_tp24_qc_arabidopsis_02.mzML,qc_arabidopsis_02,NA,NA,NA,NA
+20250402_PMA_tp24_qc_arabidopsis_03.mzML,qc_arabidopsis_03,NA,NA,NA,NA
+20250402_PMA_tp24_qc_arabidopsis_04.mzML,qc_arabidopsis_04,NA,NA,NA,NA
