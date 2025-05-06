@@ -3,7 +3,7 @@ _src_path: gh:mapp-metabolomics-unit/mapp-repo-copier-template
 common_filename_pattern: '*20250402_PMA_tp24*.mzML'
 email: pierre-marie.allard@unifr.ch
 gap_filling: true
-git_repo_path: /Users/pma/git_repos/mapp-metabolomics-unit
+git_repo_path: /home/allardpm/git_repos/mapp-metabolomics-unit
 github_username: commons-teaching
 gnps_job_id: ''
 ionization_mode: positive
