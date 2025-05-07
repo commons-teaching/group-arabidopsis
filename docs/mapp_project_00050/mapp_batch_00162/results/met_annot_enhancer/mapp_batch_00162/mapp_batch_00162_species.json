@@ -1,0 +1,71 @@
+{
+  "context": "Rosids",
+  "governing_code": "ICN",
+  "includes_approximate_matches": true,
+  "includes_deprecated_taxa": false,
+  "includes_suppressed_names": false,
+  "matched_names": [
+    "arabidopsis thaliana"
+  ],
+  "results": [
+    {
+      "matches": [
+        {
+          "is_approximate_match": false,
+          "is_synonym": false,
+          "matched_name": "Arabidopsis thaliana",
+          "nomenclature_code": "ICN",
+          "score": 1.0,
+          "search_string": "arabidopsis thaliana",
+          "taxon": {
+            "flags": [],
+            "is_suppressed": false,
+            "is_suppressed_from_synth": false,
+            "name": "Arabidopsis thaliana",
+            "ott_id": 309263,
+            "rank": "species",
+            "source": "ott3.7draft2",
+            "synonyms": [
+              "Arabidopsis thaliana apetala",
+              "Arabidopsis thaliana brachycarpa",
+              "Arabidopsis thaliana burnatii",
+              "Arabidopsis thaliana genuina",
+              "Arabidopsis thaliana thaliana",
+              "Arabis crantziana",
+              "Arabis pubicalyx",
+              "Arabis thaliana",
+              "Arabis zeyheriana",
+              "Cardamine pusilla",
+              "Conringia thaliana",
+              "Erysimum thalianum",
+              "Hesperis thaliana",
+              "Nasturtium thaliana",
+              "Phryne gesneri",
+              "Sisymbrium bellidifolium",
+              "Sisymbrium thalianum",
+              "Stenophragma thalianum"
+            ],
+            "tax_sources": [
+              "ncbi:3702",
+              "gbif:3052436",
+              "irmng:10688058"
+            ],
+            "unique_name": "Arabidopsis thaliana"
+          }
+        }
+      ],
+      "name": "arabidopsis thaliana"
+    }
+  ],
+  "taxonomy": {
+    "author": "open tree of life project",
+    "name": "ott",
+    "source": "ott3.7draft2",
+    "version": "3.7",
+    "weburl": "https://tree.opentreeoflife.org/about/taxonomy-version/ott3.7"
+  },
+  "unambiguous_names": [
+    "arabidopsis thaliana"
+  ],
+  "unmatched_names": []
+}
