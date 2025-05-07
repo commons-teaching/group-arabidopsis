@@ -44,7 +44,7 @@ repond_params:
   top_N_chemical_consistency: 15
   top_to_output: 1
   use_post_taxo: true
-  var_one_header: source_taxon
+  var_one_header: ATTRIBUTE_condition
 spectral_match_params:
   min_cos: 0.2
   min_peaks: 6
