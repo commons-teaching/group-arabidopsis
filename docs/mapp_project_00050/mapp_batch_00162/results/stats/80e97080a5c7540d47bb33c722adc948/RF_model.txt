@@ -1,0 +1,23 @@
+An rfPermute model
+
+               Type of random forest: classification 
+                     Number of trees: 500 
+No. of variables tried at each split: 7 
+       No. of permutation replicates: 500 
+                          Start time: 2025-05-14 12:56:25 
+                            End time: 2025-05-14 12:56:30 
+                            Run time: 4.6 secs 
+
+                 control_negative control_positive P2_negative P2_positive
+control_negative                0                0           1           0
+control_positive                0                0           1           0
+P2_negative                     0                0           2           2
+P2_positive                     0                0           1           3
+Overall                        NA               NA          NA          NA
+                 pct.correct LCI_0.95 UCI_0.95
+control_negative           0     0.00     97.5
+control_positive           0     0.00     97.5
+P2_negative               50     6.76     93.2
+P2_positive               75    19.41     99.4
+Overall                   50    18.71     81.3
+
