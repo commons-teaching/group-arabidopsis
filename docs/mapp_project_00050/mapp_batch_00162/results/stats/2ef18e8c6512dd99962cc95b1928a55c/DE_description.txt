@@ -1,0 +1,7 @@
+A "DatasetExperiment" object
+----------------------------
+name:          mapp_batch_00162 LCMS metabolomics dataset
+description:   Untargeted metabolomics of Arabidopsis thaliana plantlets - positive ionisation mode
+data:          10 rows x 2868 columns
+sample_meta:   10 rows x 8 columns
+variable_meta: 2868 rows x 167 columns

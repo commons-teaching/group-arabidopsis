@@ -1,0 +1,15 @@
+An rfPermute model
+
+               Type of random forest: classification 
+                     Number of trees: 500 
+No. of variables tried at each split: 9 
+       No. of permutation replicates: 500 
+                          Start time: 2025-05-14 15:33:06 
+                            End time: 2025-05-14 15:33:10 
+                            Run time: 3.78 secs 
+
+                     Arabidopsis thaliana NA pct.correct LCI_0.95 UCI_0.95
+Arabidopsis thaliana                    8  0         100    63.06    100.0
+NA                                      1  1          50     1.26     98.7
+Overall                                NA NA          90    55.50     99.7
+
