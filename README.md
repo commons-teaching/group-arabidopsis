@@ -10,14 +10,7 @@
 ## Data
 https://drive.switch.ch/index.php/s/vdAzFJkYNIF005T
 
-## Test
-to show git pull
+## Report template
 
-Have a look at the [docs folder](https://github.com/commons-teaching/group-arabidopsis/docs), this is very likely where your files are.
+https://github.com/commons-teaching/SBL.20004.2022/blob/23ea9493b07940f0592a2004e6caacd9e66ab359/report_template.md
 
----
-Repository initiated with [mapp-metabolomics-unit/mapp-repo-copier-template](https://github.com/mapp-metabolomics-unit/mapp-repo-copier-template).
-
-This project was created by MAPP Metabolomics Unit.
-
-Contact: pierre-marie.allard@unifr.ch
