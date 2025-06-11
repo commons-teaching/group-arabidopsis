@@ -1,0 +1,231 @@
+---
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+# A metabolomic study of *Arabidopsis thaliana* in response to 3-Hydroxy-Decanoic acid
+
+**SBL.20004 - Introduction to metabolomics: data acquisition and processing : Report**
+
+spring semester 2025
+
+----
+- Blanc Chloé Camille
+- Thiry Olga Olinka Alexandra
+----
+<style>
+p {
+  text-align: justify;
+}
+p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+p[align="center"] > em {
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+</style>
+
+## Introduction
+[*Arabidopsis thaliana*](https://www.wikidata.org/wiki/Q158695) is a flowering plant belonging to the Brassicaceae family, widely used as a model organism in plant biology as well as in the study of complex organisms more generally <sup><a href="#ref1">1</a></sup><sup><a href="#ref2">2</a></sup>. Native to Asia and North Africa, *A. thaliana* primarily colonizes disturbed habitats, such as the edges of agricultural fields <sup><a href="#ref2">2</a></sup>.
+
+Its main characteristics include small size (20 to 25 cm), rapid growth, high fertility, and a short life cycle of about six weeks <sup><a href="#ref1">1</a></sup><sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>. Its compact genome of 120 megabases, organized into five chromosomes and comprising approximately 20,000 genes, was fully sequenced as early as the year 2000 <sup><a href="#ref1">1</a></sup><sup><a href="#ref2">2</a></sup><sup><a href="#ref3">3</a></sup>. Easily cultivated in the laboratory, *Arabidopsis thaliana* is an ideal model organism for studying the fundamental mechanisms of plant development, genetics, and physiology <sup><a href="#ref3">3</a></sup>.
+
+Like animals, plants have an innate immune system to defend themselves against pathogens. The first step towards defense is pattern-triggered immunity.
+
+In the cell membrane of the plant are located PRRs (pattern recognition receptors) that can specifically recognize microbe-associated molecular patterns. When a pathogen encounters the plant, the plant can sense pathogen motifs and react accordingly. The MAMP binds to the PRR’s extracellular domain/sensor domain leading to several responses from the plant to defend itself, such as ROS production in the apoplast, calcium influx in the cytoplasm, MAP kinase activation or regulation of gene transcription <sup><a href="#ref4">4</a></sup>. The protein of interest is the pattern recognition receptor LORE (lipooligosaccharide-specific reduced elicitation) <sup><a href="#ref5">5</a></sup> that recognizes bacterial medium-chain 3-hydroxy fatty acid in a chain-length manner. The specificity is highest with [3-hydroxy-decanoic acid](https://www.wikidata.org/wiki/Q15425812) <sup><a href="#ref6">6</a></sup>.
+
+Another immune response that can be analyzed in plant immunity is growth inhibition. Growth and defense are two natural processes that require a lot of energy. When plants are attacked by pathogens, growth is cast aside to redirect energy toward defense mechanisms.
+
+To explore the potential contribution of 3-hydroxy-decanoic acid to this trade-off between growth and defense, a seedling growth inhibition assay based on two studies was done <sup><a href="#ref7">7</a></sup><sup><a href="#ref8">8</a></sup>.
+
+The goal of this experiment is to investigate how the exposition of *A. thaliana* to the medium chain fatty acid 3-hydroxy-decanoic acid over 12 days of growth in liquid ½ MS medium influences metabolic changes in the plant.
+
+## Material & Methods
+*A. thaliana* seeds were sterilized with chlorine gas. After adding the seeds on ½ MS medium (0.8% agar, 0.25% sucrose), they were left to grow for 6 days under long day conditions (16h of light, and 8h of night at 21°C). After this germination phase, seedlings were transferred to liquid ½ MS medium into a 48-well plate to grow for 12 additional days, one seedling per well. Two conditions were set:
+
+1. **P2-** : a control: 1/2 MS only
+2. **P2+** : a treatment: ½ MS medium complemented with 3-hydroxy-decanoic acid at 5uM.
+
+### Sample collection
+After the growth period, two days before the sample preparation, the seedlings were collected and weighed, four seedlings per treatment as well as one sample of each treatment taken directly from the wells were frozen in liquid nitrogen.
+
+### Sample preparation
+For each extraction, we placed our frozen seedlings in 1.5 mL Eppendorf tubes. In these tubes, we added 2 to 3 sterile metal beads, as well as 1.5 mL of a solvent composed of 80% methanol, 20% water and 0.1% formic acid.
+
+To extract metabolites, samples were mechanically ground for approximately three minutes using a Retsch machine, ensuring efficient tissue disruption.
+
+Once the homogenization was complete, the tubes were centrifuged to settle solid/liquid particles, and the supernatant collected and transferred to glass tubes adapted for mass spectrometry analysis.
+
+### LC-MS Analysis
+The samples were introduced into a liquid chromatography coupled with mass spectrometry (LC-MS) system for the separation, identification, and analysis of the metabolites present.
+
+Liquid chromatography separates compounds based on their chemical properties, while mass spectrometry is used to measure the mass and structure of the separated molecules.
+
+In this experiment, separation was performed using an ultra-high-performance liquid chromatography (UHPLC) system. Molecules were separated on a reverse-phase column according to their polarity, and the resulting eluate was introduce into a mass spectrometer, where an MS/MS analysis was performed to quantify the metabolome.
+
+Prior to injection, the operating conditions of the LC-MS system were optimized, and these specific experimental conditions are provided in the two following links:
+
+- [LC conditions](https://github.com/commons-teaching/SBL.20004.2024/blob/main/lc_conditions.txt)
+- [MS conditions](https://github.com/commons-teaching/SBL.20004.2024/blob/main/ms_conditions.txt)
+
+### Data treatment
+The data obtained thanks to the LC-MS were first converted into format compatible with [MZMINE](https://mzio.io/mzmine-news/), using [ProteoWizard](https://urldefense.com/v3/__https://proteowizard.sourceforge.io/__;!!L4CEoEA!oMgIxvuQ2eBdbUoieEaaumBnCsHyg61Wm5dVLRw3WVuUcXLYoJTQ_9hqN7HV2VYef7EfanTKSjM86EwN5o3KChiBcIFpbV_ntjr00pw$). 
+
+Then, subsequent data processing steps were carried out using MZMINE, enabling the construction of chromatograms from the mzML files. This allowed for the detection and alignment of features across samples, facilitating further analysis : 
+
+1. Detection of noise level in order to differentiate real peaks from noise-related peaks.
+
+2. Creation of a chromatogram for each of the ions detected. 
+
+3. Deconvolution of the chromatogram in order to separate merged peaks.
+
+4. Grouping isotopes belonging to the same molecule.
+
+5. Aligning the features between the different samples in order to compare their intensities. 
+
+Note that the detailed parameters applied during data processing are accessible in this following [link](https://github.com/commons-teaching/group-arabidopsis/blob/main/docs/mapp_project_00050/mapp_batch_00162/results/mzmine/mapp_batch_00162.mzbatch).
+
+Finally, our spectral network was visualized using [Cytoscape v_3.10.3](https://cytoscape.org/).
+
+Metabolite annotation was carried out using the [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp?redirect=auth) platform for spectral library matching and molecular networking. In addition, molecular formulas and compound classes were predicted using [SIRIUS](https://boecker-lab.github.io/docs.sirius.github.io/), Canopus, and ISDB. In order to visualize the molecular structures, we used the [Cheminformatics Tools app](https://apps.cytoscape.org/apps/chemviz2).
+
+## Results
+After data processing, 2868 features were kept in the [final feature list ](https://github.com/commons-teaching/group-arabidopsis/blob/main/arabido_metabolo.xlsx).
+
+### Statistics & Molecular Network
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/GlobalNetworkannot.png" alt="global network" />
+</p>
+<p align="center"><em> Figure 1 : global network</em></p>
+
+As seen in the global network above (figure 1), no cluster appears to display treatment-specific information. Therefore, we turned to statistical analyses first, with the intention of returning to Cytoscape later.
+
+Moreover, in this metabolomics study, we explored the effect of a treatment (P2) on the metabolic profiles of plants by comparing conditions with and without the elicitor. Although the initial protocol also included control groups (positive and negative), several limitations, such as the absence of true control conditions (plants grown in the medium used as a control) and the lack of replication, led us to focus the analysis on the comparison between P2− and P2+.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/PCA.png" alt="PCA" />
+</p>
+<p align="center"><em>Figure 2 : PCA</em></p>
+
+The PCA analysis (Figure 2), an unsupervised method used to visualize the overall structure of the data, does not show a clear separation in the principal component space. This suggests that, without prior knowledge of group labels, the metabolic profiles do not exhibit major or consistent variations that would distinguish the conditions.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/PSDA.png" alt="PLSDA" />
+</p>
+<p align="center"><em>Figure 3 : PLS-DA</em></p>
+
+
+In contrast, the PLS-DA (Figure 3), a supervised method, allows a clearer distinction between the two groups. This separation, though moderate, indicates that certain variables can discriminate between the samples when the analysis is guided by group information. However, the results should be interpreted with caution, as PLS-DA tends to find separation even when it may not be biologically meaningful.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/VIP.png" alt="VIP scores" />
+</p>
+<p align="center"><em>Figure 4 : VIP scores</em></p>
+
+
+The analysis of VIP scores (Figure 4) from the PLS-DA helps identify the metabolites that contribute most to the separation between the two groups. Several compounds show VIP values greater than 2, making them promising candidates for further investigation. These metabolites were then mapped back onto the metabolic network to better understand their chemical and biological context.
+Focusing on the first detected feature (1348), we are led to the cluster shown in Figure 5:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/Cluster1annot.png" alt="Cluster 1" />
+</p>
+<p align="center"><em>Figure 5 : Cluster 1</em></p>
+
+
+In this cluster (Figure 5), 13 molecules are present, ranging from m/z: 496.33 to 758.57, RT: 4.97 to 9.96 min. Out of the 13, 8 belong to the superclass of Glycerophospholipids, more precisely to the subclass glycerophosphocholines, in the fatty acids’ pathway. From the pie charts, we observe a visibly higher proportion of these compounds in the treated seedlings, except for ID931,932, which are visibly present in higher proportion in the untreated seedlings.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/glycerophospho.png" alt="glycerophosphocholines" />
+</p>
+
+
+Out of the eight glycerophosphocholines, 6 have a molecular representation (Figure 6):
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/structuremoleculaires.png" alt="Molecular structures" />
+</p>
+<p align="center"><em>Figure 6 : Molecular structures</em></p>
+
+
+Glycerophosphocholine (GPC) is a degradation product of phosphatidylcholine (PC), a major phospholipid of the eukaryotic cell membrane. GPC is a glycerophosphodiester that accumulates during the turnover or remodeling of membrane phospholipids. In plants, its presence is associated to degradation processes of the membrane, even more so under stress conditions. <sup><a href="#ref9">9</a></sup><sup><a href="#ref10">10</a></sup>
+When plants interact with microbes, symbiotic and pathogenic, membrane trafficking has a crucial process in facilitating rapid and effective responses. When interacting with pathogenic microbes, immune receptors at the cell membrane undergo endocytosis, while newly synthetized immune receptors are trafficked from the endoplasmic reticulum to the plasma membrane to maintain surveillance awareness. <sup><a href="#ref11">11</a></sup> Endocytosis and exocytosis regulates receptor availability and contributes to the constant restructuration of the membrane, a process that may as well contribute to the generation of Glycerophosphocholine. 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/chromatograme1434.png" alt="Figure 7 : Total Ion Chromatogram, ID: 1434 and 1435." />
+</p>
+<p align="center"><em>Figure 7 : Total Ion Chromatogram, ID: 1434 and 1435.</em></p>
+
+Figure 7 displays a portion of the aligned chromatograms, highlighting the intensity peaks for two compounds, identified as ID 1434 and ID 1435. Focusing on compound 1434  which belongs, as mentioned, to the class of Glycerophosphocholines. We observe that it eluted from the LC column at 7.18 minutes. 
+
+After alignment across all samples, we can directly compare the intensity of this peak between treatments. The treated seedlings, represented by sample IDs 40 (dark blue), 42 (green), 43 (orange), and 44 (light blue), consistently show higher peak intensities compared to the untreated seedlings.
+Since peak height correlates with the abundance of the compound in each sample, this indicates that compound 1434 is more abundant in the treated seedlings than in the untreated ones.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/Ms1_1434.png" alt="Figure 8 : Full MS, ID: 1434, Mass spectrum at the retention time of highest intensity for ID 1434 in treated sample 40. " />
+</p>
+<p align="center"><em>Figure 8 : Full MS, ID: 1434</em></p>
+
+Figure 8 presents the full mass spectrum corresponding to the highest recorded intensity of compound ID 1434, observed in one of the treated seedlings (sample ID 40, shown previously in dark blue on the chromatogram).
+In the spectrum, the parent ion is clearly visible at m/z = 520.34, accompanied by four isotopologs at m/z 521.34, 522.34, 523.35, and 524.35. The consistent 1 Da spacing between peaks indicates that the detected ions carry a single positive charge (z = 1).
+
+
+## Conclusion
+This study aimed to explore the metabolic effects of exposing *Arabidopsis thaliana* to 3-hydroxydecanoic acid, a plant defence elicitor recognised by the LORE receptor. Our initial hypothesis was that the application of this elicitor would trigger an immune response observable via metabolic changes detectable by LC-MS.
+
+Although PLS-DA analysis showed moderate separation between treated and untreated conditions, highlighting several metabolites potentially contributing to this difference, the results should be interpreted with caution due to several experimental limitations: 
+
+1. the absence of true controls (medium alone)
+
+2. the lack of biological replicates
+
+3. low biomass per sample
+
+These factors limited the robustness of the statistical analyses and the accurate detection of metabolites of interest.
+
+Despite these limitations, we were able to identify a cluster enriched in glycerophosphocholines in treated plants, suggesting a reorganisation of membranes associated with an immune response. This observation aligns with our hypothesis that 3-hydroxydecanoic acid triggers an immune-like response, potentially leading to resource reallocation from growth to defense.
+
+To support these results, we also performed a visual observation of seedlings grown under different conditions (Figure 9). Columns 1 and 2 correspond to the negative control, columns 3 and 4 to seedlings treated with 5 µM 3-hydroxydecanoic acid (like in our metabolomic experiment), and columns 5 and 6 to those treated with 50 µM. This image shows that at a higher concentration (50 µM), the phenotypic effects, particularly growth inhibition, are much more visible, confirming the idea of a trade-off between growth and defence.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/commons-teaching/group-arabidopsis/main/Plantconcentration2.0.jpg" alt="Figure 9 : Seedling growth under different treatment conditions. Columns 1–2: control; 3–4: 5 µM; 5–6: 50 µM" />
+</p>
+<p align="center"><em>Figure 9 : Seedling growth under different treatment conditions. Columns 1–2: control; 3–4: 5 µM; 5–6: 50 µM</em></p>
+
+These observations reinforce our initial hypothesis that 3-hydroxydecanoic acid induces an immune-related metabolic response, to the detriment of growth. To conclusively validate these results, it will be essential to repeat the experiment with:
+
+1. a true control (medium alone),
+
+2. a sufficient number of biological replicates,
+
+3. a larger biomass per sample,
+
+4. variable concentrations of the elicitor in order to study the dose-dependent effect.
+
+## References
+
+1. <a id="ref1"></a> Meinke, D. W., et al. (1998). *Arabidopsis thaliana*: a model plant for genome analysis. **Science**, 282(5389), 662–682.  
+
+2. <a id="ref2"></a> Shimizu, K. K., et al. (2005). Ecological and evolutionary genomics of *Arabidopsis*. **Plant Physiology**, 138(2), 578–584.  
+
+3. <a id="ref3"></a> AGI (2000). Analysis of the genome sequence of the flowering plant *Arabidopsis thaliana*. **Nature**, 408(6814), 796–815.  
+
+4. <a id="ref4"></a> Saijo, Y., & Loo, E. P. (2018). Plant immunity in signal integration between biotic and abiotic stress responses. **New Phytologist**, 217(1), 14–27.  
+
+5. <a id="ref5"></a> Ranf, S., et al. (2015). A lectin S-domain receptor kinase mediates lipopolysaccharide sensing in Arabidopsis thaliana. **Nature Immunology**, 16(4), 426–433.  
+
+6. <a id="ref6"></a> Kutschera, A., et al. (2019). Bacterial medium-chain 3-hydroxy fatty acid metabolites trigger immunity in Arabidopsis. **Nature Communications**, 10, 343.  
+
+7. <a id="ref7"></a> Bredow, M., et al. (2019). The plant immune receptor LORE senses bacterial medium-chain 3-hydroxy fatty acids. **Nature Plants**, 5(9), 924–931.  
+
+8. <a id="ref8"></a> Leicher, L., et al. (2024). Defense-growth trade-offs in plants mediated by lipid-derived signaling molecules. **Journal of Experimental Botany**, 75(3), 881–895.  
+
+9. <a id="ref9"></a> van der Rest B, Boisson AM, Gout E, Bligny R, Douce R. (2002). Glycerophosphocholine metabolism in higher plant cells. Evidence of a new glyceryl-phosphodiester phosphodiesterase. **Plant Physiology**, 130(1), 244-55. doi: 10.1104/pp.003392. PMID: 12226504; PMCID: PMC166557.  
+
+10. <a id="ref10"></a> Yu, L., Zhou, C., Fan, J., Shanklin, J., & Xu, C. (2021). Mechanisms and functions of membrane lipid remodeling in plants. **Plant Journal**, 107, 37-53. https://doi.org/10.1111/tpj.15273  
+
+11. <a id="ref11"></a> Gu Y., Zavaliev R., Dong X. (2017). Membrane trafficking in plant immunity. **Molecular Plant**, 10(8), 1026-1034. doi: 10.1016/j.molp.2017.07.001. Epub 2017 Jul 8. PMID: 28698057; PMCID: PMC5673114.  
